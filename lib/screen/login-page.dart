@@ -28,33 +28,64 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 200, // Atur lebar yang sama untuk kedua tombol di sini
-                  child: ElevatedButton.icon(
+                Container(
+                  width: 200,
+                  child: MaterialButton(
                     onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blue, // Warna latar belakang tombol
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 24),
+                    color: Color(0xFF4960F9),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    icon: Icons.,
-                    label: const Text(
-                      'Login',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Sign In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        SizedBox(width: 24),
+                        Icon(
+                          Icons.arrow_right_alt,
+                          color: Colors.white,
+                        ),
+                      ],
                     ),
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
-                SizedBox(
-                  width: 200, // Atur lebar yang sama untuk kedua tombol di sini
-                  child: ElevatedButton(
+                Container(
+                  width: 200,
+                  child: MaterialButton(
                     onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.green, // Warna latar belakang tombol
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 24),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(color: Color(0xFF4960F9), width: 2),
                     ),
-                    child: const Text(
-                      'Sign Up',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Sign Up',
+                          style: TextStyle(
+                            color: Color(0xFF4960F9),
+                            fontSize: 16,
+                          ),
+                        ),
+                        SizedBox(width: 24),
+                        Icon(
+                          Icons.arrow_right_alt,
+                          color: Color(0xFF4960F9),
+                        ),
+                      ],
                     ),
                   ),
                 ),
