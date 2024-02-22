@@ -1,15 +1,15 @@
-import 'package:app_test/screen/sign-up.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key); // Memperbaiki konstruktor
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   bool _isObscure = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,39 +48,39 @@ class _SignInPageState extends State<SignInPage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: TextFormField(
-                  obscureText:
-                      _isObscure, // mengatur apakah teks akan disembunyikan atau tidak
+                  decoration: const InputDecoration(
+                    border: UnderlineInputBorder(),
+                    labelText: 'Nickname',
+                    suffixIcon: Icon(
+                      Icons.person,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextFormField(
+                  obscureText: _isObscure,
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(),
                     labelText: 'Password',
-                    // menambahkan ikon untuk toggle keamanan
                     suffixIcon: IconButton(
                       icon: Icon(
                         _isObscure ? Icons.visibility : Icons.visibility_off,
                       ),
                       onPressed: () {
                         setState(() {
-                          _isObscure =
-                              !_isObscure; // membalikkan nilai _isObscure ketika ikon diklik
+                          _isObscure = !_isObscure;
                         });
                       },
                     ),
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SignUpPage(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Forgot Password?',
-                  style: TextStyle(color: Colors.blue, fontSize: 18),
-                ),
+              const Text(
+                'Forgot Password?',
+                style: TextStyle(color: Colors.blue, fontSize: 18),
               ),
             ],
           ),
@@ -89,31 +89,35 @@ class _SignInPageState extends State<SignInPage> {
             right: 0,
             bottom: 50,
             child: Container(
-              width: 300, // Mengubah nilai lebar menjadi 300
-              child: MaterialButton(
-                onPressed: () {},
-                padding:
-                    const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-                color: Color(0xFF4960F9),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+              width: 300,
+              child: ElevatedButton( // Mengubah MaterialButton menjadi ElevatedButton
+                onPressed: () {
+                  // Tambahkan logika untuk navigasi ke halaman berikutnya di sini
+                },
+                style: ElevatedButton.styleFrom( // Menggunakan style untuk menentukan warna dan bentuk tombol
+                  primary: Color(0xFF4960F9),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Sign In',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
+                child: const Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 24),
-                    Icon(
-                      Icons.arrow_right_alt,
-                      color: Colors.white,
-                    ),
-                  ],
+                      Icon(
+                        Icons.arrow_right_alt,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

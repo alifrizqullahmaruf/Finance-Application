@@ -1,3 +1,5 @@
+import 'package:app_test/screen/sign-in.dart';
+import 'package:app_test/screen/sign-up.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -31,7 +33,14 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 200,
                   child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignInPage(),
+                        ),
+                      );
+                    },
                     padding: const EdgeInsets.symmetric(
                         vertical: 12, horizontal: 24),
                     color: Color(0xFF4960F9),
@@ -63,7 +72,14 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 200,
                   child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignUpPage(),
+                        ),
+                      );
+                    },
                     padding: const EdgeInsets.symmetric(
                         vertical: 12, horizontal: 24),
                     shape: RoundedRectangleBorder(
