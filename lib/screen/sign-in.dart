@@ -1,5 +1,7 @@
 import 'package:app_test/screen/sign-up.dart';
 import 'package:flutter/material.dart';
+import 'package:app_test/widget/text_from_field.dart';
+import 'package:app_test/widget/text_field_pass.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -9,7 +11,6 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,47 +32,12 @@ class _SignInPageState extends State<SignInPage> {
                 'Sign In',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Username',
-                    suffixIcon: Icon(
-                      Icons.done_rounded,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                child: TextFormField(
-                  obscureText:
-                      _isObscure, // mengatur apakah teks akan disembunyikan atau tidak
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'Password',
-                    // menambahkan ikon untuk toggle keamanan
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        _isObscure ? Icons.visibility : Icons.visibility_off,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _isObscure =
-                              !_isObscure; // membalikkan nilai _isObscure ketika ikon diklik
-                        });
-                      },
-                    ),
-                  ),
-                ),
-              ),
+              const MyTextFormField('Email', Icons.mail),
+              const TextFieldPass(label: 'Password', icon: Icons.visibility),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                    context,
+                    context,  
                     MaterialPageRoute(
                       builder: (context) => SignUpPage(),
                     ),

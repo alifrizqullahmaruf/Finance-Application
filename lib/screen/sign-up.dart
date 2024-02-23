@@ -1,3 +1,4 @@
+import 'package:app_test/screen/bottom-navbar/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -90,18 +91,27 @@ class _SignUpPageState extends State<SignUpPage> {
             bottom: 50,
             child: Container(
               width: 300,
-              child: ElevatedButton( // Mengubah MaterialButton menjadi ElevatedButton
+              child: ElevatedButton(
+                // Mengubah MaterialButton menjadi ElevatedButton
                 onPressed: () {
                   // Tambahkan logika untuk navigasi ke halaman berikutnya di sini
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BottomNavbar(),
+                    ),
+                  );
                 },
-                style: ElevatedButton.styleFrom( // Menggunakan style untuk menentukan warna dan bentuk tombol
+                style: ElevatedButton.styleFrom(
+                  // Menggunakan style untuk menentukan warna dan bentuk tombol
                   primary: Color(0xFF4960F9),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 child: const Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
