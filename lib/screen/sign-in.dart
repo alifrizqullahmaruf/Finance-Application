@@ -1,3 +1,4 @@
+import 'package:app_test/screen/bottom-navbar/bottom_nav.dart';
 import 'package:app_test/screen/sign-up.dart';
 import 'package:flutter/material.dart';
 import 'package:app_test/widget/text_from_field.dart';
@@ -37,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                    context,  
+                    context,
                     MaterialPageRoute(
                       builder: (context) => SignUpPage(),
                     ),
@@ -57,7 +58,10 @@ class _SignInPageState extends State<SignInPage> {
             child: Container(
               width: 300, // Mengubah nilai lebar menjadi 300
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BottomNavbar()));
+                },
                 padding:
                     const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                 color: Color(0xFF4960F9),

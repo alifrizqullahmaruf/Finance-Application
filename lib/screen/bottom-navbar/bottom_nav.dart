@@ -14,9 +14,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int _selectedIndex = 0;
 
   final List<Widget> _widgetOptions = <Widget>[
-    Wallet(),
+    WalletScrreen(),
     NotificationScreen(),
-    Profile(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -31,15 +31,18 @@ class _BottomNavbarState extends State<BottomNavbar> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Wallet"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_active), label: "Notification"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(24),
+        child: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Wallet"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications_active), label: "Notification"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
