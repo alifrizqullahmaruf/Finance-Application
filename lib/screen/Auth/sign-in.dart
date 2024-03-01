@@ -1,5 +1,5 @@
-import 'package:app_test/screen/bottom-navbar/bottom_nav.dart';
-import 'package:app_test/screen/sign-up.dart';
+import 'package:app_test/screen/Bottom_Navbar/bottom_nav.dart';
+import 'package:app_test/screen/Auth/sign-up.dart';
 import 'package:flutter/material.dart';
 import 'package:app_test/widget/text_from_field.dart';
 import 'package:app_test/widget/text_field_pass.dart';

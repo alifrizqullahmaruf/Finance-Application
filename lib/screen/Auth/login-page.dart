@@ -1,5 +1,5 @@
-import 'package:app_test/screen/sign-in.dart';
-import 'package:app_test/screen/sign-up.dart';
+import 'package:app_test/screen/Auth/sign-in.dart';
+import 'package:app_test/screen/Auth/sign-up.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

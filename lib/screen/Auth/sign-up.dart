@@ -1,4 +1,4 @@
-import 'package:app_test/screen/bottom-navbar/bottom_nav.dart';
+import 'package:app_test/screen/Bottom_Navbar/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
