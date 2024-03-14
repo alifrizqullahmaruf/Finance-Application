@@ -58,6 +58,8 @@ flutter:
     - assets\images\Colorful-Logo 1.png
     - assets\images\image_background.png
     - assets\images\Background-Auth.png
+    - assets\images\Profile_background.png
+    - assets\images\Profile_image.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
