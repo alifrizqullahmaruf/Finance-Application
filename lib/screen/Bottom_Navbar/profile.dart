@@ -1,3 +1,4 @@
+import 'package:app_test/screen/Auth/login-page.dart';
 import 'package:app_test/widget/data_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 16), // Add some spacing
 
                   TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const LoginPage()));
+                    },
                     icon: const Icon(Icons.exit_to_app),
                     label: const Text('Sign out'),
                     style: TextButton.styleFrom(
