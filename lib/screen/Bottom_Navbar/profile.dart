@@ -27,17 +27,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   // Judul
-                  Text(
+                  const Text(
                     'Profile',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
-
+                  const SizedBox(
+                    height: 50,
+                  ),
                   // Profile
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image(
@@ -58,17 +60,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
 
                   // Data
-                  DataProfile('Username', 'Alif Rizz'),
-                  DataProfile('First name', 'Alif'),
-                  DataProfile('Last name', 'Rizz'),
-                  DataProfile('Date of birth', '14-11-2003'),
+                  const DataProfile('Username', 'alifrizqullahmaruf2003'),
+                  const DataProfile('First name', 'Alif'),
+                  const DataProfile('Last name', 'Rizz'),
+                  const DataProfile('Date of birth', '14-11-2003'),
 
-                  SizedBox(height: 16), // Add some spacing
+                  const SizedBox(height: 16), // Add some spacing
 
                   TextButton.icon(
                     onPressed: () {},
-                    icon: Icon(Icons.exit_to_app),
-                    label: Text('Sign out'),
+                    icon: const Icon(Icons.exit_to_app),
+                    label: const Text('Sign out'),
                     style: TextButton.styleFrom(
                       primary: Colors.blue,
                     ),
